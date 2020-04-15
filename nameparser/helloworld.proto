@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package nameparser;
+
+// The greeting service definition.
+service NameParser {
+  // Sends a greeting
+  rpc ParseName (NameRequest) returns (ParsedName) {}
+}
+
+// The request message containing the user's name.
+message NameRequest {
+  string id = 1;
+  string name = 2;
+}
+
+// The response message containing the greetings
+message ParsedName {
+  string name = 1;
+}
